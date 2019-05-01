@@ -33,6 +33,7 @@ if (urlParams["bodyStyle"]) document.body.setAttribute("style", urlParams["bodyS
 var c;
 setInterval(
 c = function() {
+    moment.locale('id')
     output.innerText = moment().format(urlParams["format"] || '') + urlParams["tz"];
 }, 1000);
 c();
