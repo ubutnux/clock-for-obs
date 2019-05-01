@@ -32,9 +32,6 @@ if (urlParams["bodyStyle"]) document.body.setAttribute("style", urlParams["bodyS
 var c;
 setInterval(
 c = function() {
-    import moment from 'moment'
-    import 'moment/locale/id'  // without this line it didn't work
-    moment.locale('id')
     output.innerText = moment().format(urlParams["format"] || '') + urlParams["tz"];
 }, 1000);
 c();
